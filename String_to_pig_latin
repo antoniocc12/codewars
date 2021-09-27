@@ -1,0 +1,12 @@
+def pig_it(text):
+    separado = text.split(' ')
+    resultado = ' '
+    
+    for palabra in separado:
+        if palabra in '!.%&?':
+            resultado = resultado + palabra
+        else:
+            nueva = palabra[1:] + palabra[0] + 'ay'
+            resultado = resultado + nueva + ' '
+    
+    return resultado.strip(' ') 
