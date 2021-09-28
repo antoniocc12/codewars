@@ -1,0 +1,13 @@
+def namelist(names):
+    lista = []
+    for x in names:
+        y = list(x.values())
+        lista.append(y[0])
+    print(lista)
+    if len(lista) == 1:
+        frase = lista[0]
+    elif len(lista) == 0:
+        return ""
+    else:
+        frase = ", ".join(lista[0: -1]) + " & " + lista[-1]
+    return frase
