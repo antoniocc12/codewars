@@ -1,0 +1,12 @@
+def array_diff(a, b):
+    c = a[:]
+    cont = 0
+    for i in b:
+        for j in c:
+            if j == i:
+                cont += 1
+        for k in range(cont):
+            a.remove(i)
+            c = a
+        cont = 0 
+    return a
